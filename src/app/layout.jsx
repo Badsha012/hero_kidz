@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -6,7 +7,10 @@ import Footer from "@/components/layout/Footer";
 const  poppins=Poppins({
   weight:["100","200","300","400","500","600","800"]
 
-})
+});
+ export const FontBangla = localFont({
+  src: './../fonts/mayaboti-normal.ttf',
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -24,7 +28,7 @@ export default function RootLayout({ children }) {
         </header>
         <main className="py-2 md:w-11/12 mx-auto min-h-[calc(100vh-302px)]">  {children}</main>
        
-        <footer className="py-2 md:w-11/12 mx-auto">
+        <footer className="">
           <Footer></Footer>
         </footer>
       </body>
