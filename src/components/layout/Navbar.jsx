@@ -2,6 +2,13 @@ import React from "react";
 import Logo from "./Logo";
 
 const Navbar = () => {
+const nav=<>
+<li>
+  
+</li>
+</>
+
+
   return (
     <div>
       <div className="navbar bg-base-100 ">
