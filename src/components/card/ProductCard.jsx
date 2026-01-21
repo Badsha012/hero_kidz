@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { Star, ShoppingCart } from "lucide-react";
+//import Image from "next/image";
+//import Image from "next/image";
+import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   const { title, image, price, reviews, sold, ratings } = product;
@@ -11,7 +12,7 @@ const ProductCard = ({ product }) => {
       
       {/* Image */}
       <figure className="relative h-52 bg-base-200">
-        <Image
+        <img
           src={image}
           alt={title}
           fill
@@ -29,7 +30,7 @@ const ProductCard = ({ product }) => {
 
         {/* Rating */}
         <div className="flex items-center gap-1 text-sm text-yellow-500">
-          <Star size={16} fill="currentColor" />
+          <FaStar />
           <span className="font-medium">{ratings}</span>
           <span className="text-gray-400 text-xs">
             ({reviews})
@@ -47,8 +48,8 @@ const ProductCard = ({ product }) => {
         </p>
 
         {/* Button */}
-        <button className="btn btn-primary btn-sm w-full gap-2 mt-2">
-          <ShoppingCart size={16} />
+        <button className="btn btn-primary btn-sm w-full gap-2 mt-2 flex items-center justify-center">
+          <FaShoppingCart />
           Add to Cart
         </button>
 
