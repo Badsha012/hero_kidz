@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+//import Image from "next/image";
 import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
       
       {/* Image */}
       <figure className="relative h-52 bg-base-200 overflow-hidden">
-        <Image
+        <img
         width={200}
         height={180}
         
